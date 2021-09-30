@@ -11,7 +11,7 @@ import About from './pages/About';
 function App() {
   return (
     <div className="App">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <MiniDrawer>
               <Route exact path="/">
                 <Home />
