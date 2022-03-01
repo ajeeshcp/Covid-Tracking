@@ -1,8 +1,7 @@
 import { Grid, Paper } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Barchart from '../charts/Barchart'
-import Tablesection from './pageElements/Tablesection'
+import Barchart from '../charts/Barchart' ;
 
 
 function Statewise() {
@@ -47,15 +46,7 @@ function Statewise() {
                     </Paper>
                 </Grid>
             </Grid>
-            <Grid container spacing={2} columns={12}>
-                <Grid item xs={12} md={12} lg={12}>
-                    <Paper sx={{marginTop:"1rem",padding:"1rem",backgroundColor:"#eeeeee"}}>
-                        <Tablesection tablecontents={tablecontents} 
-                        tableHeading={["State","Active","Recovered","Deceased","Total Infected"]}
-                        />
-                    </Paper>
-                </Grid>
-            </Grid>
+    
         </div>
     )
 }

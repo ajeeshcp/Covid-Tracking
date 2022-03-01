@@ -12,7 +12,6 @@ function Districtwise() {
     
     const handleStateChange = (e) => {
         const indexNum = e.target.value ;
-        // const stateCode = TempDetails[indexNum].statecode;
         axios.get("https://data.covid19india.org/v4/min/data.min.json").then((res) => {
             
             
@@ -61,15 +60,10 @@ function Districtwise() {
                             </Select>
                         </FormControl>
                     </Grid>
-                    {/* <Grid item >
-                    <Button variant="contained" startIcon={<SearchIcon />}>
-                        Search
-                    </Button>
-                    </Grid> */}
                 </Grid>
             
                 <Grid container spacing={2} columns={12}>
-                    <Grid item xs={6} sm={12} md={12} lg={12}>
+                    <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Paper sx={{marginTop:"2rem",padding:"1rem",backgroundColor:"#eeeeee"}}>
                             <DistrictTable tableHeading={["District","Confirmed","Deceased","Recovered","Vaccine 1","Vaccine 2"]} 
                             tablecontents={tableContent}
